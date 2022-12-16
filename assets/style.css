@@ -1,0 +1,24 @@
+body {
+    background-color: gainsboro;
+}
+
+.home-info {
+    background-image: linear-gradient(to left, rgb(150, 85, 150),  purple);
+    color: white;
+    margin: 50px;
+    border-radius: 10px;
+}
+
+.home-img {
+    padding: 1px solid black;
+}
+
+#home-picture {
+    border-radius: 10px;
+}
+
+.navbar-menu {
+    background-image: linear-gradient(-5deg, black, transparent)
+
+
+}
