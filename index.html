@@ -39,13 +39,16 @@
               <a class="navbar-link">
                 More
               </a>
+
+              
+              
       
               <div class="navbar-dropdown">
                 <a class="navbar-item">
                   About
                 </a>
-                <a class="navbar-item">
-                  Jobs
+                <a class="navbar-item has-dropdown">
+                  Filter
                 </a>
                 <a class="navbar-item">
                   Contact
@@ -57,6 +60,12 @@
               </div>
             </div>
           </div>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Restaraunt Features
+            </a>
+            </div>
 
           <div class="field has-addons">
             <div class="control">
@@ -89,42 +98,105 @@
       <main>
         
 
-          <div class="columns home-info" id="house-1">
-            <div class="column is-two-fifths home-img"><img id="home-picture" src="./assets/home img.jpg" alt="a picture of a house"></div>
-            <div id="name" class="column">Restaraunt Name:</div>
+          <div class="columns restaurant-info" id="restaurant-1">
+            <div class="column is-two-fifths home-img"><img id="restaurant-picture" src="./assets/restaurant picture.jpg" alt="a picture of a restaurant"></div>
+            <div id="name" class="column">Restaurant Name:</div>
             <div id="address" class="column">Address:</div>
             <div id="description" class="column">Description:</div>
             </div>
 
-          <div class="columns home-info" id="house-2">
-            <div class="column is-two-fifths home-img"><img id="home-picture" src="./assets/home img.jpg" alt="a picture of a house"></div>
-            <div id="name" class="column">Restaraunt Name:</div>
+          <div class="columns restaurant-info" id="restaurant-2">
+            <div class="column is-two-fifths home-img"><img id="restaurant-picture" src="./assets/restaurant picture.jpg" alt="a picture of a restaurant"></div>
+            <div id="name" class="column">Restaurant Name:</div>
             <div id="address" class="column">Address:</div>
             <div id="description" class="column">Description:</div>
           </div>
 
-          <div class="columns home-info" id="house-3">
-            <div class="column is-two-fifths home-img"><img id="home-picture" src="./assets/home img.jpg" alt="a picture of a house"></div>
-            <div id="name" class="column">Restaraunt Name:</div>
+          <div class="columns restaurant-info" id="restaurant-3">
+            <div class="column is-two-fifths home-img"><img id="restaurant-picture" src="./assets/restaurant picture.jpg" alt="a picture of a restaurant"></div>
+            <div id="name" class="column">Restaurant Name:</div>
             <div id="address" class="column">Address:</div>
             <div id="description" class="column">Description:</div>
           </div>
 
-          <div class="columns home-info" id="house-4">
-            <div class="column is-two-fifths home-img"><img id="home-picture" src="./assets/home img.jpg" alt="a picture of a house"></div>
-            <div id="name" class="column">Restaraunt Name:</div>
+          <div class="columns restaurant-info" id="restaurant-4">
+            <div class="column is-two-fifths home-img"><img id="restaurant-picture" src="./assets/restaurant picture.jpg" alt="a picture of a restaurant"></div>
+            <div id="name" class="column">Restaurant Name:</div>
             <div id="address" class="column">Address:</div>
             <div id="description" class="column">Description:</div>
           </div>
 
-          <div class="columns home-info" id="house-5">
-            <div class="column is-two-fifths home-img"><img id="home-picture" src="./assets/home img.jpg" alt="a picture of a house"></div>
-            <div id="name" class="column">Restaraunt Name:</div>
+          <div class="columns restaurant-info" id="restaurant-5">
+            <div class="column is-two-fifths home-img"><img id="restaurant-picture" src="./assets/restaurant picture.jpg" alt="a picture of a restaurant"></div>
+            <div id="name" class="column">Restaurant Name:</div>
             <div id="address" class="column">Address:</div>
             <div id="description" class="column">Description:</div>
           </div>
+
+          <section>
+            <fieldset class="choices">
+              <legend>Choose your Restaurant features:</legend>
+          
+              <div>
+                <input type="checkbox" id="outdoor" name="outdoor" checked>
+                <label for="outdoor">Outdoor</label>
+              </div>
+          
+              <div>
+                <input type="checkbox" id="indoor" name="indoor">
+                <label for="indoor">Indoor</label>
+              </div>
+              <div>
+                <input type="checkbox" id="vegetarian" name="vegetarian">
+                <label for="vegetarian">Vegetarian</label>
+              </div>
+              <div>
+                <input type="checkbox" id="alcohol" name="alcohol">
+                <label for="alcohol">Serves Alcohol</label>
+              </div>
+              <div>
+                <input type="checkbox" id="breakfast" name="breakfast">
+                <label for="breakfast">Serves Breakfast</label>
+              </div>
+              <div>
+                <input type="checkbox" id="lunch" name="lunch">
+                <label for="lunch">Serves Lunch</label>
+              </div>
+              <div>
+                <input type="checkbox" id="dinner" name="dinner">
+                <label for="dinner">Serves Dinner</label>
+              </div>
+              <div>
+                <input type="checkbox" id="delivery" name="delivery">
+                <label for="delivery">Delivery</label>
+              </div>
+              <div>
+                <input type="checkbox" id="curbside" name="curbside">
+                <label for="curbside">Curbside Pickup</label>
+              </div>
+              <div>
+                <input type="checkbox" id="rating" name="rating">
+                <label for="rating">Rating</label>
+              </div>
+              <div>
+                <input type="checkbox" id="price" name="price">
+                <label for="price">Price-Level</label>
+              </div>
+              <div>
+                <input type="checkbox" id="reservations" name="reservations">
+                <label for="reservations">Takes Reservations</label>
+              </div>
+
+          </fieldset>
+          </section>
 
       </main>
+
+      <div class="bottom-info">
+        <h2>555-555-5555</h2>
+        <h2><a href="mailto:ryanbairdchilders@gmail.com">ryanbairdchilders@gmail.com</a></h2>
+        
+      </div>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -133,10 +205,8 @@
     <script src="assets/script.js"></script>
 </body>
 
-<div class="bottom-info">
-  <h2>555-555-5555</h2>
-  <h2><a href="mailto:ryanbairdchilders@gmail.com">ryanbairdchilders@gmail.com</a></h2>
-  <h2>Github</h2>
-</div>
+
+
+
 
 </html>
