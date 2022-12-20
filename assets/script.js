@@ -6,7 +6,8 @@ var descriptionEl = document.querySelector('#description');
 
 
 searchBtn.addEventListener('click', function() {
-    console.log("clicked");
+    console.log('clicked');
+    getRestaurants();
 })
 
 var apiKey = 'AIzaSyBIkD8TRPCnwLsy4XuUqCY5UBPpQKqFktY';
@@ -15,8 +16,4 @@ function getRestaurants (city) {
 
 };
 
-// https://maps.googleapis.com/maps/api/place/findplacefromtext/json
-  //?fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry
-  //&input=Museum%20of%20Contemporary%20Art%20Australia
-  //&inputtype=textquery
-  //&key=AIzaSyBIkD8TRPCnwLsy4XuUqCY5UBPpQKqFktY
+// https://maps.googleapis.com/maps/api/place/textsearch/json?fields=formatted_address%2Cname&dine_in&price_level&serves_dinner&serves_lunch&input=Restaurant&inputtype=textquery&key=AIzaSyBIkD8TRPCnwLsy4XuUqCY5UBPpQKqFktY
