@@ -2,7 +2,7 @@ body {
     background-color: gainsboro;
 }
 
-.home-info {
+.restaurant-info {
     background-image: linear-gradient(to left, rgb(150, 85, 150),  purple);
     color: white;
     margin: 50px;
@@ -14,7 +14,7 @@ body {
     padding: 1px solid black;
 }
 
-#home-picture {
+#restaurant-picture {
     border-radius: 10px;
 }
 
@@ -30,6 +30,7 @@ body {
 }
 
 .bottom-info {
+    padding: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -37,6 +38,24 @@ body {
     background-color: gray;
     color: white;
 
+
+
+}
+
+.choices {
+    padding: 20px;
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+legend {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    
 }
 
 
