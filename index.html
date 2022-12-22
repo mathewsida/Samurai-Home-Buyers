@@ -47,25 +47,17 @@
                 <a class="navbar-item">
                   About
                 </a>
-                <a class="navbar-item has-dropdown">
-                  Filter
-                </a>
-                <a class="navbar-item">
+                
+                <a class="navbar-item" href="#contact">
                   Contact
                 </a>
-                <hr class="navbar-divider">
-                <a class="navbar-item">
-                  Report an issue
-                </a>
+                
+                
               </div>
             </div>
           </div>
 
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              Restaraunt Features
-            </a>
-            </div>
+          
 
           <div class="field has-addons">
             <div class="control">
@@ -83,11 +75,11 @@
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
-                <a class="button is-primary">
-                  <strong>Sign up</strong>
+                <a class="button is-primary is-hoverable" href="#map">
+                  <strong>Map</strong>
                 </a>
-                <a class="button is-light">
-                  Log in
+                <a class="button is-light is-hoverable" href="#features">
+                  Restaurant Features
                 </a>
               </div>
             </div>
@@ -106,41 +98,63 @@
             <div class="column is-two-fifths home-img"><img id="restaurant-picture" src="./assets/restaurant picture.jpg" alt="a picture of a restaurant"></div>
             <div id="name" class="column">Restaurant Name:</div>
             <div id="address" class="column">Address:</div>
-            <div id="description" class="column">Description:</div>
+            <div id="description" class="column">Description:
+              
+            <h2>Hours:</h2>
+            <h2>Rating:</h2>
+            <h2>Price level:</h2>
+          </div>
             </div>
 
           <div class="columns restaurant-info" id="restaurant-2">
             <div class="column is-two-fifths home-img"><img id="restaurant-picture" src="./assets/restaurant picture.jpg" alt="a picture of a restaurant"></div>
             <div id="name" class="column">Restaurant Name:</div>
             <div id="address" class="column">Address:</div>
-            <div id="description" class="column">Description:</div>
+            <div id="description" class="column">Description:
+              <h2>Hours:</h2>
+            <h2>Rating:</h2>
+            <h2>Price level:</h2>
+            </div>
           </div>
 
           <div class="columns restaurant-info" id="restaurant-3">
             <div class="column is-two-fifths home-img"><img id="restaurant-picture" src="./assets/restaurant picture.jpg" alt="a picture of a restaurant"></div>
             <div id="name" class="column">Restaurant Name:</div>
             <div id="address" class="column">Address:</div>
-            <div id="description" class="column">Description:</div>
+            <div id="description" class="column">Description:
+              <h2>Hours:</h2>
+            <h2>Rating:</h2>
+            <h2>Price level:</h2>
+            </div>
           </div>
 
           <div class="columns restaurant-info" id="restaurant-4">
             <div class="column is-two-fifths home-img"><img id="restaurant-picture" src="./assets/restaurant picture.jpg" alt="a picture of a restaurant"></div>
             <div id="name" class="column">Restaurant Name:</div>
             <div id="address" class="column">Address:</div>
-            <div id="description" class="column">Description:</div>
+            <div id="description" class="column">Description:
+            <h2>Hours:</h2>
+            <h2>Rating:</h2>
+            <h2>Price level:</h2>
+            </div>
           </div>
 
           <div class="columns restaurant-info" id="restaurant-5">
             <div class="column is-two-fifths home-img"><img id="restaurant-picture" src="./assets/restaurant picture.jpg" alt="a picture of a restaurant"></div>
             <div id="name" class="column">Restaurant Name:</div>
             <div id="address" class="column">Address:</div>
-            <div id="description" class="column">Description:</div>
+            <div id="description" class="column">Description:
+            <h2>Hours:</h2>
+            <h2>Rating:</h2>
+            <h2>Price level:</h2>
+            </div>
           </div>
 
           <section>
-            <fieldset class="choices">
+            <fieldset class="choices" id="features">
               <legend>Choose your Restaurant features:</legend>
           
+              <div>
               <div>
                 <input type="checkbox" id="outdoor" name="outdoor" checked>
                 <label for="outdoor">Outdoor</label>
@@ -154,6 +168,8 @@
                 <input type="checkbox" id="vegetarian" name="vegetarian">
                 <label for="vegetarian">Vegetarian</label>
               </div>
+            </div>
+            <div>
               <div>
                 <input type="checkbox" id="alcohol" name="alcohol">
                 <label for="alcohol">Serves Alcohol</label>
@@ -166,6 +182,8 @@
                 <input type="checkbox" id="lunch" name="lunch">
                 <label for="lunch">Serves Lunch</label>
               </div>
+            </div>
+            <div>
               <div>
                 <input type="checkbox" id="dinner" name="dinner">
                 <label for="dinner">Serves Dinner</label>
@@ -178,6 +196,8 @@
                 <input type="checkbox" id="curbside" name="curbside">
                 <label for="curbside">Curbside Pickup</label>
               </div>
+            </div>
+            <div>
               <div>
                 <input type="checkbox" id="rating" name="rating">
                 <label for="rating">Rating</label>
@@ -190,15 +210,19 @@
                 <input type="checkbox" id="reservations" name="reservations">
                 <label for="reservations">Takes Reservations</label>
               </div>
+            </div>
+
+            
 
           </fieldset>
+          <button class="button filter-button" id="filter-button">Search Choices</button>
           </section>
           
       </main>
-      
-      <div class="bottom-info">
-        <h2>555-555-5555</h2>
-        <h2><a href="mailto:ryanbairdchilders@gmail.com">ryanbairdchilders@gmail.com</a></h2>
+      <div class="contact">Contact Us:</div>
+      <div class="bottom-info" id="contact">
+        <h2>Phone: 555-555-5555</h2>
+        <h2><a href="mailto:ryanbairdchilders@gmail.com">Email: ryanbairdchilders@gmail.com</a></h2>
         
       </div>
     <div id="map"></div>
