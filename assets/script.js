@@ -3,6 +3,18 @@ var searchBtn = document.querySelector('#search-button');
 var cityEl = document.querySelector('#city');
 var addressEl = document.querySelector('#address');
 var descriptionEl = document.querySelector('#description');
+var outdoorEl = document.querySelector('#outdoor');
+var indoorEl = document.querySelector('#indoor');
+var vegetarianEl = document.querySelector('#vegetarian');
+var servesAlcoholEl = document.querySelector('#alcohol');
+var servesBreakfastEl = document.querySelector('#breakfast');
+var servesLunchEl = document.querySelector('#lunch');
+var servesDinnerEl = document.querySelector('#dinner');
+var deliveryEl = document.querySelector('#delivery');
+var curbsidePickupEl = document.querySelector('#curbside');
+var ratingEl = document.querySelector('#rating');
+var priceEl = document.querySelector('#price');
+var takesResEl = document.querySelector('#reservation');
 
 
 //Map Options (Create Variable to be input to change lat and lng)
@@ -35,29 +47,35 @@ const detailWindow = new google.maps.InfoWindow
   content: '<h2> Space Needle <h2>'
 })
 
-  marker.addEventListener("mouseover", () =>
-  {
-    detailWindow.open(map,marker)
-  })
+ // marker.addEventListener("mouseover", () =>
+ // {
+  //  detailWindow.open(map,marker)
+ // })
 
   
-
-
 
 }
 
 searchBtn.addEventListener('click', function() {
-    console.log("clicked");
+    console.log(cityEl.value);
+    getRestaurants();
 })
 
 var apiKey = 'AIzaSyBIkD8TRPCnwLsy4XuUqCY5UBPpQKqFktY';
 
 function getRestaurants (city) {
+   var url = `https://maps.googleapis.com/maps/api/place/textsearch/json?fields=formatted_address%2Cname&curbside-pickup&price_level&rating&serves_beer&serves_breakfast&serves_dinner&serves_lunch&serves_vegetarian_food&takeout&delivery&input=Restaurant&inputtype=textquery&key=AIzaSyBIkD8TRPCnwLsy4XuUqCY5UBPpQKqFktY`
+   console.log(url);
+   fetch(url)
+      .then(function (response) {
+        console.log(response)
+         return response.json()
+      }).then(function (data) {
+         console.log(data);
 
-};
 
-// https://maps.googleapis.com/maps/api/place/findplacefromtext/json
-  //?fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry
-  //&input=Museum%20of%20Contemporary%20Art%20Australia
-  //&inputtype=textquery
-  //&key=AIzaSyBIkD8TRPCnwLsy4XuUqCY5UBPpQKqFktY
+      })
+  };
+
+// possible link
+// https://maps.googleapis.com/maps/api/place/textsearch/json?fields=formatted_address%2Cname&curbside-pickup&price_level&rating&serves_beer&serves_breakfast&serves_dinner&serves_lunch&serves_vegetarian_food&takeout&delivery&input=Restaurant&inputtype=textquery&key=AIzaSyBIkD8TRPCnwLsy4XuUqCY5UBPpQKqFktY
