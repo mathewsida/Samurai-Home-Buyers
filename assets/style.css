@@ -29,6 +29,15 @@ body {
     
 }
 
+.title h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-weight: bold;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 80px;
+    color: rgb(76, 23, 76)
+}
+
 .bottom-info {
     padding: 20px;
     display: flex;
