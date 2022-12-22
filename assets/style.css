@@ -38,17 +38,29 @@ body {
     color: rgb(76, 23, 76)
 }
 
+img:hover {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
 .bottom-info {
     padding: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     justify-content: space-evenly;
-    background-color: gray;
-    color: white;
+    background-color: gainsboro;
+    color: black;
+    
 
 
 
+}
+
+.contact {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .choices {
@@ -57,13 +69,23 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    
 
+}
+
+.filter-button {
+    display: flex;
+    align-items: center;
+    left: 46%;
+    bottom: 14px;
+    
 }
 
 legend {
     text-align: center;
     font-weight: bold;
     text-decoration: underline;
+    
     
 }
 
