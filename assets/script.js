@@ -15,8 +15,11 @@ var curbsidePickupEl = document.querySelector('#curbside');
 var ratingEl = document.querySelector('#rating');
 var priceEl = document.querySelector('#price');
 var takesResEl = document.querySelector('#reservation');
+
 var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=seattle&term=starbucks&price=1";
 var apiKey = "DK0XjQWdA4BqtE9d8Bp8a-RVwjtf7EeHoXtmo6S1cGS2b4Atc_qf6kTCwKoH0JFdOW-ocv4yoBAudpgHJ5R6VTjT7FXB14gcEsrsT3KfdwnoOh7RVn3olYulhCelY3Yx";
+var kidFriendlyEl = document.querySelector('#kid-friendly');
+
 
 
 //Map Options (Create Variable to be input to change lat and lng)
