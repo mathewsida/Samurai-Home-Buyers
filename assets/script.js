@@ -100,34 +100,34 @@ searchBtn.addEventListener('click', function() {
 
 
 
-  $.ajax({
-    url: queryURL,
-    method: "GET",
+//   $.ajax({
+//     url: queryURL,
+//     method: "GET",
+//     headers: {
+//         "accept": "application/json",
+//         "x-requested-with": "xmlhttprequest",
+//         "Access-Control-Allow-Origin":"*",
+//         "Authorization": `Bearer ${apiKey}`
+//      },
+//    success: function(result){
+//         console.log(result);
+//     }
+//  });
+  function getRestaurants() {
+  const options = {
+    method: 'GET',
     headers: {
-        "accept": "application/json",
-        "x-requested-with": "xmlhttprequest",
-        "Access-Control-Allow-Origin":"*",
-        "Authorization": `Bearer ${apiKey}`
-     },
-   success: function(result){
-        console.log(result);
+      accept: 'application/json',
+      Authorization: 'Bearer DK0XjQWdA4BqtE9d8Bp8a-RVwjtf7EeHoXtmo6S1cGS2b4Atc_qf6kTCwKoH0JFdOW-ocv4yoBAudpgHJ5R6VTjT7FXB14gcEsrsT3KfdwnoOh7RVn3olYulhCelY3Yx'
     }
- });
+  };
   
-  // const options = {
-  //   method: 'GET',
-  //   headers: {
-  //     accept: 'application/json',
-  //     Authorization: 'Bearer DK0XjQWdA4BqtE9d8Bp8a-RVwjtf7EeHoXtmo6S1cGS2b4Atc_qf6kTCwKoH0JFdOW-ocv4yoBAudpgHJ5R6VTjT7FXB14gcEsrsT3KfdwnoOh7RVn3olYulhCelY3Yx'
-  //   }
-  // };
-  
-  fetch('https://api.yelp.com/v3/businesses/search?location=seattle&term=starbucks&price=1', ajax)
+  fetch(' https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=seattle&term=restaurants&price=1', options)
     .then(response => response.json())
     .then(response => console.log(response))
     .catch(err => console.error(err));
 
-
+  }
 getRestaurants();
 // Client ID
 // QAAEdheiexNQPRBhWZ1d3Q
