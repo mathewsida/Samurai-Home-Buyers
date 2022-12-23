@@ -1,4 +1,3 @@
-// Colton API KEY: AIzaSyBIkD8TRPCnwLsy4XuUqCY5UBPpQKqFktY
 var searchBtn = document.querySelector('#search-button');
 var cityEl = document.querySelector('#city');
 var addressEl = document.querySelector('#address');
@@ -15,9 +14,6 @@ var curbsidePickupEl = document.querySelector('#curbside');
 var ratingEl = document.querySelector('#rating');
 var priceEl = document.querySelector('#price');
 var takesResEl = document.querySelector('#reservation');
-
-var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=seattle&term=starbucks&price=1";
-var apiKey = "DK0XjQWdA4BqtE9d8Bp8a-RVwjtf7EeHoXtmo6S1cGS2b4Atc_qf6kTCwKoH0JFdOW-ocv4yoBAudpgHJ5R6VTjT7FXB14gcEsrsT3KfdwnoOh7RVn3olYulhCelY3Yx";
 var kidFriendlyEl = document.querySelector('#kid-friendly');
 
 
@@ -98,42 +94,32 @@ searchBtn.addEventListener('click', function() {
     console.log(cityEl.value);
     getRestaurants();
     initMap();
+    displayRestaurants();
 })
 
 
 
 
-  $.ajax({
-    url: queryURL,
-    method: "GET",
+
+// this function gets all the data from the yelp API
+
+  function getRestaurants() {
+  const options = {
+    method: 'GET',
     headers: {
-        "accept": "application/json",
-        "x-requested-with": "xmlhttprequest",
-        "Access-Control-Allow-Origin":"*",
-        "Authorization": `Bearer ${apiKey}`
-     },
-   success: function(result){
-        console.log(result);
+      accept: 'application/json',
+      Authorization: 'Bearer DK0XjQWdA4BqtE9d8Bp8a-RVwjtf7EeHoXtmo6S1cGS2b4Atc_qf6kTCwKoH0JFdOW-ocv4yoBAudpgHJ5R6VTjT7FXB14gcEsrsT3KfdwnoOh7RVn3olYulhCelY3Yx'
     }
- });
+  };
   
-  // const options = {
-  //   method: 'GET',
-  //   headers: {
-  //     accept: 'application/json',
-  //     Authorization: 'Bearer DK0XjQWdA4BqtE9d8Bp8a-RVwjtf7EeHoXtmo6S1cGS2b4Atc_qf6kTCwKoH0JFdOW-ocv4yoBAudpgHJ5R6VTjT7FXB14gcEsrsT3KfdwnoOh7RVn3olYulhCelY3Yx'
-  //   }
-  // };
-  
-  fetch('https://api.yelp.com/v3/businesses/search?location=seattle&term=starbucks&price=1', ajax)
+  fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=' + cityEl.value + '&term=restaurants&price=1&price=2&price=3&limit=50', options)
     .then(response => response.json())
     .then(response => console.log(response))
     .catch(err => console.error(err));
 
+  }
 
-getRestaurants();
-// Client ID
-// QAAEdheiexNQPRBhWZ1d3Q
-
-// API Key
-// DK0XjQWdA4BqtE9d8Bp8a-RVwjtf7EeHoXtmo6S1cGS2b4Atc_qf6kTCwKoH0JFdOW-ocv4yoBAudpgHJ5R6VTjT7FXB14gcEsrsT3KfdwnoOh7RVn3olYulhCelY3Yx
+  function displayRestaurants(data) {
+      var { name } = data;
+        console.log()
+  }
