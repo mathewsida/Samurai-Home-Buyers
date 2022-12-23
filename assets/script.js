@@ -15,6 +15,7 @@ var curbsidePickupEl = document.querySelector('#curbside');
 var ratingEl = document.querySelector('#rating');
 var priceEl = document.querySelector('#price');
 var takesResEl = document.querySelector('#reservation');
+var kidFriendlyEl = document.querySelector('#kid-friendly');
 
 
 //Map Options (Create Variable to be input to change lat and lng)
