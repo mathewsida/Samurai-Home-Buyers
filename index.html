@@ -2,248 +2,195 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-  <title>Samurai Home Buyer</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="assets/style.css">
+  <title>Samurai Restaurant Finder</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item">
-            <img src="assets/samurai-warrior_157713-74.png" width="75" height="75">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <img src="assets/samurai-warrior_157713-74.png" width="75" height="75">
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+
+
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More
           </a>
-      
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-      
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
+
+
+
+
+          <div class="navbar-dropdown">
             <a class="navbar-item">
-              Home
+              About
             </a>
-      
-            
-      
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                More
-              </a>
 
-              
-              
-      
-              <div class="navbar-dropdown">
-                <a class="navbar-item">
-                  About
-                </a>
-                
-                <a class="navbar-item" href="#contact">
-                  Contact
-                </a>
-                
-                
-              </div>
-            </div>
-          </div>
+            <a class="navbar-item" href="#contact">
+              Contact
+            </a>
 
-          
 
-          <div class="field has-addons">
-            <div class="control">
-              <input class="input" type="text" id="city" placeholder="Search City">
-            </div>
-            <div class="control">
-              <a id="search-button" class="button is-info input">
-                Search
-              </a>
-            </div>
-          </div>
-
-          
-      
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary is-hoverable" href="#map">
-                  <strong>Map</strong>
-                </a>
-                <a class="button is-light is-hoverable" href="#features">
-                  Restaurant Features
-                </a>
-              </div>
-            </div>
           </div>
         </div>
-      </nav>
-
-      <header class="title">
-        <h1>Samurai Restaurant Finder</h1>
-      </header>
-
-      <main>
-        
-
-          <div class="columns restaurant-info" id="restaurant-1">
-            <div class="column is-two-fifths home-img"><img id="restaurant-picture" src="./assets/restaurant picture.jpg" alt="a picture of a restaurant"></div>
-            <div id="name" class="column">Restaurant Name:</div>
-            <div id="address" class="column">Address:</div>
-            <div id="description" class="column">Description:
-              
-            <h2>Hours:</h2>
-            <h2>Rating:</h2>
-            <h2>Price level:</h2>
-          </div>
-            </div>
-
-          <div class="columns restaurant-info" id="restaurant-2">
-            <div class="column is-two-fifths home-img"><img id="restaurant-picture" src="./assets/restaurant picture.jpg" alt="a picture of a restaurant"></div>
-            <div id="name" class="column">Restaurant Name:</div>
-            <div id="address" class="column">Address:</div>
-            <div id="description" class="column">Description:
-              <h2>Hours:</h2>
-            <h2>Rating:</h2>
-            <h2>Price level:</h2>
-            </div>
-          </div>
-
-          <div class="columns restaurant-info" id="restaurant-3">
-            <div class="column is-two-fifths home-img"><img id="restaurant-picture" src="./assets/restaurant picture.jpg" alt="a picture of a restaurant"></div>
-            <div id="name" class="column">Restaurant Name:</div>
-            <div id="address" class="column">Address:</div>
-            <div id="description" class="column">Description:
-              <h2>Hours:</h2>
-            <h2>Rating:</h2>
-            <h2>Price level:</h2>
-            </div>
-          </div>
-
-          <div class="columns restaurant-info" id="restaurant-4">
-            <div class="column is-two-fifths home-img"><img id="restaurant-picture" src="./assets/restaurant picture.jpg" alt="a picture of a restaurant"></div>
-            <div id="name" class="column">Restaurant Name:</div>
-            <div id="address" class="column">Address:</div>
-            <div id="description" class="column">Description:
-            <h2>Hours:</h2>
-            <h2>Rating:</h2>
-            <h2>Price level:</h2>
-            </div>
-          </div>
-
-          <div class="columns restaurant-info" id="restaurant-5">
-            <div class="column is-two-fifths home-img"><img id="restaurant-picture" src="./assets/restaurant picture.jpg" alt="a picture of a restaurant"></div>
-            <div id="name" class="column">Restaurant Name:</div>
-            <div id="address" class="column">Address:</div>
-            <div id="description" class="column">Description:
-            <h2>Hours:</h2>
-            <h2>Rating:</h2>
-            <h2>Price level:</h2>
-            </div>
-          </div>
-
-          <div class="next-button">
-          <a href="#" class="previous">&laquo; Previous</a>
-<a href="#" class="next">Next &raquo;</a>
-
-<a href="#" class="previous round">&#8249;</a>
-<a href="#" class="next round">&#8250;</a>
-</div>
-
-          <section>
-            <fieldset class="choices" id="features">
-              <legend>Choose your Restaurant features:</legend>
-          
-              <div>
-              <div>
-                <input type="checkbox" id="outdoor" name="outdoor" checked>
-                <label for="outdoor">Outdoor</label>
-              </div>
-          
-              <div>
-                <input type="checkbox" id="indoor" name="indoor">
-                <label for="indoor">Indoor</label>
-              </div>
-              <div>
-                <input type="checkbox" id="vegetarian" name="vegetarian">
-                <label for="vegetarian">Vegetarian</label>
-              </div>
-              <div>
-                <input type="checkbox" id="kid-friendly" name="kid-friendly">
-                <label for="kid-friendly">Kid Friendly</label>
-              </div>
-            </div>
-            <div>
-              <div>
-                <input type="checkbox" id="alcohol" name="alcohol">
-                <label for="alcohol">Serves Alcohol</label>
-              </div>
-              <div>
-                <input type="checkbox" id="breakfast" name="breakfast">
-                <label for="breakfast">Serves Breakfast</label>
-              </div>
-              <div>
-                <input type="checkbox" id="lunch" name="lunch">
-                <label for="lunch">Serves Lunch</label>
-              </div>
-            </div>
-            <div>
-              <div>
-                <input type="checkbox" id="dinner" name="dinner">
-                <label for="dinner">Serves Dinner</label>
-              </div>
-              <div>
-                <input type="checkbox" id="delivery" name="delivery">
-                <label for="delivery">Delivery</label>
-              </div>
-              <div>
-                <input type="checkbox" id="curbside" name="curbside">
-                <label for="curbside">Curbside Pickup</label>
-              </div>
-            </div>
-            <div>
-              <div>
-                <input type="checkbox" id="rating" name="rating">
-                <label for="rating">Rating</label>
-              </div>
-              <div>
-                <input type="checkbox" id="price" name="price">
-                <label for="price">Price-Level</label>
-              </div>
-              <div>
-                <input type="checkbox" id="reservations" name="reservations">
-                <label for="reservations">Takes Reservations</label>
-              </div>
-            </div>
-
-            
-
-          </fieldset>
-          <button class="button filter-button" id="filter-button">Search Choices</button>
-          </section>
-          
-      </main>
-      <div class="contact">Contact Us:</div>
-      <div class="bottom-info" id="contact">
-        <h2>Phone: 555-555-5555</h2>
-        <h2><a href="mailto:ryanbairdchilders@gmail.com">Email: ryanbairdchilders@gmail.com</a></h2>
-        
       </div>
-    <div id="map"></div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC26fo-Rjw5nL4R5MTQMgqTRw7rJaP1xRg&libraries=places&callback=initMap"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-    <script src="assets/script.js"></script>
+
+
+      <div class="field has-addons">
+        <div class="control">
+          <input class="input" type="text" id="city" placeholder="Search City">
+        </div>
+        <div class="control">
+          <a id="search-button" class="button is-info input">
+            Search
+          </a>
+        </div>
+      </div>
+
+
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary is-hoverable" href="#map">
+              <strong>Map</strong>
+            </a>
+            <a class="button is-light is-hoverable" href="#features">
+              Restaurant Features
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="title">
+    <h1>Samurai Restaurant Finder</h1>
+  </header>
+
+  <main>
+<div class="card-container"></div>
+
+
+
+    <div class="next-button">
+      <a href="#" class="previous">&laquo; Previous</a>
+      <a href="#" class="next">Next &raquo;</a>
+
+      <a href="#" class="previous round">&#8249;</a>
+      <a href="#" class="next round">&#8250;</a>
+    </div>
+
+    <section>
+      <fieldset class="choices" id="features">
+        <legend>Choose your Restaurant features:</legend>
+
+        <div>
+          <div>
+            <input type="checkbox" id="outdoor" name="outdoor" checked>
+            <label for="outdoor">Outdoor</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="indoor" name="indoor">
+            <label for="indoor">Indoor</label>
+          </div>
+          <div>
+            <input type="checkbox" id="vegetarian" name="vegetarian">
+            <label for="vegetarian">Vegetarian</label>
+          </div>
+          <div>
+            <input type="checkbox" id="kid-friendly" name="kid-friendly">
+            <label for="kid-friendly">Kid Friendly</label>
+          </div>
+        </div>
+        <div>
+          <div>
+            <input type="checkbox" id="alcohol" name="alcohol">
+            <label for="alcohol">Serves Alcohol</label>
+          </div>
+          <div>
+            <input type="checkbox" id="breakfast" name="breakfast">
+            <label for="breakfast">Serves Breakfast</label>
+          </div>
+          <div>
+            <input type="checkbox" id="lunch" name="lunch">
+            <label for="lunch">Serves Lunch</label>
+          </div>
+        </div>
+        <div>
+          <div>
+            <input type="checkbox" id="dinner" name="dinner">
+            <label for="dinner">Serves Dinner</label>
+          </div>
+          <div>
+            <input type="checkbox" id="delivery" name="delivery">
+            <label for="delivery">Delivery</label>
+          </div>
+          <div>
+            <input type="checkbox" id="curbside" name="curbside">
+            <label for="curbside">Curbside Pickup</label>
+          </div>
+        </div>
+        <div>
+          <div>
+            <input type="checkbox" id="rating" name="rating">
+            <label for="rating">Rating</label>
+          </div>
+          <div>
+            <input type="checkbox" id="price" name="price">
+            <label for="price">Price-Level</label>
+          </div>
+          <div>
+            <input type="checkbox" id="reservations" name="reservations">
+            <label for="reservations">Takes Reservations</label>
+          </div>
+        </div>
+
+
+
+      </fieldset>
+      <button class="button filter-button" id="filter-button">Search Choices</button>
+    </section>
+
+  </main>
+  <div class="contact">Contact Us:</div>
+  <div class="bottom-info" id="contact">
+    <h2>Phone: 555-555-5555</h2>
+    <h2><a href="mailto:ryanbairdchilders@gmail.com">Email: ryanbairdchilders@gmail.com</a></h2>
+
+  </div>
+  <div id="map"></div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC26fo-Rjw5nL4R5MTQMgqTRw7rJaP1xRg&libraries=places&callback=initMap"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+  <script src="assets/script.js"></script>
 </body>
 
 

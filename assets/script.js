@@ -15,7 +15,7 @@ var ratingEl = document.querySelector('#rating');
 var priceEl = document.querySelector('#price');
 var takesResEl = document.querySelector('#reservation');
 var kidFriendlyEl = document.querySelector('#kid-friendly');
-
+var cardsContainer = document.querySelector('.card-container')
 
 
 //Map Options (Create Variable to be input to change lat and lng)
@@ -94,7 +94,6 @@ searchBtn.addEventListener('click', function() {
     console.log(cityEl.value);
     getRestaurants();
     initMap();
-    displayRestaurants();
 })
 
 
@@ -114,12 +113,43 @@ searchBtn.addEventListener('click', function() {
   
   fetch('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=' + cityEl.value + '&term=restaurants&price=1&price=2&price=3&limit=50', options)
     .then(response => response.json())
-    .then(response => console.log(response))
+    .then(response => {
+      console.log(response)
+      displayRestaurants(response.businesses)
+    })
     .catch(err => console.error(err));
 
   }
-
+function isOpen(isOpen) {
+  if (isOpen!==true){
+    return 'open'
+  }
+  return 'closed'
+}
   function displayRestaurants(data) {
-      var { name } = data;
-        console.log()
+    let restaurants = []
+    let cardText = ''
+      for (let i = 0; i < 5; i++) {
+        let ran = Math.floor(Math.random() * data.length)
+        restaurants.push(data [ran])
+        
+      }
+        console.log(restaurants)
+        for (let i = 0; i < 5; i++) {
+          let card = `<div class="columns restaurant-info" id="restaurant-1">
+      <div class="column is-two-fifths home-img"><img id="restaurant-picture" src=${restaurants[i].image_url}
+          alt="a picture of a restaurant"></div>
+      <div id="name-1" class="column">Restaurant Name: ${restaurants[i].name}</div>
+      <div id="address-1" class="column">Address: ${restaurants[i].location.address1}</div>
+      <div id="description-1" class="column">Description:
+
+        <h2 class="time-1">Hours: ${isOpen(restaurants[i].is_closed)}</h2>
+        <h2 class="stars-1">Rating: ${restaurants[i].rating}</h2>
+        <h2 class="money-1">Price level: ${restaurants[i].price}</h2>
+      </div>
+    </div>
+           `
+          cardText = cardText + card
+        }
+        cardsContainer.innerHTML = cardText
   }
