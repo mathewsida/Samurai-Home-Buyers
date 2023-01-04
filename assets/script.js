@@ -133,15 +133,30 @@ function displayRestaurants(data) {
 
   }
   console.log(restaurants)
+
   for (let i = 0; i < 5; i++) {
+    let lat = $,restaurants[i].latitude};
+    function initMap() {
+      var options =
+      {
+        center: { lat: 47.6062, lng: -122.3321 },
+        zoom: 4.2
+      }
+      map = new google.maps.Map(document.getElementById("map"), options)
+
+    const marker = new google.maps.Marker
+    {
+      position: { lat: ${restaurants[i]:latitude}, lng: ${restaurants[i]:longitude} },
+      map: map
+      //icon:"insert link here" in case we want to have a custom map marker could be cool haha
+    }
     let card = `<div class="columns restaurant-info" id="restaurant-1">
       <div class="column is-two-fifths home-img"><img id="restaurant-picture" src=${restaurants[i].image_url}
           alt="a picture of a restaurant"></div>
-          <div id="map"></div>
       <div id="name-1" class="column">Restaurant Name: ${restaurants[i].name}</div>
       <div id="address-1" class="column">Address: ${restaurants[i].location.address1}</div>
+      
       <div id="description-1" class="column">Description:
-
         <h2 class="time-1">Hours: ${isOpen(restaurants[i].is_closed)}</h2>
         <h2 class="stars-1">Rating: ${restaurants[i].rating}</h2>
         <h2 class="money-1">Price level: ${restaurants[i].price}</h2>
