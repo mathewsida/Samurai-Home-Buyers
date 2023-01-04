@@ -24,13 +24,11 @@ function initMap() {
   var options =
   {
     center: { lat: 47.6062, lng: -122.3321 },
-    zoom: 5
+    zoom: 4.2
   }
-
 
   //Dispays map on the page
   map = new google.maps.Map(document.getElementById("map"), options)
-
 
   //Places marker on the map (Create variable to have input lat and lng)
   const marker = new google.maps.Marker
@@ -139,6 +137,7 @@ function displayRestaurants(data) {
     let card = `<div class="columns restaurant-info" id="restaurant-1">
       <div class="column is-two-fifths home-img"><img id="restaurant-picture" src=${restaurants[i].image_url}
           alt="a picture of a restaurant"></div>
+          <div id="map"></div>
       <div id="name-1" class="column">Restaurant Name: ${restaurants[i].name}</div>
       <div id="address-1" class="column">Address: ${restaurants[i].location.address1}</div>
       <div id="description-1" class="column">Description:
@@ -148,7 +147,7 @@ function displayRestaurants(data) {
         <h2 class="money-1">Price level: ${restaurants[i].price}</h2>
       </div>
     </div>
-           `
+        `
     cardText = cardText + card
   }
   cardsContainer.innerHTML = cardText
