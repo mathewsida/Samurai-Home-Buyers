@@ -15,7 +15,8 @@ var ratingEl = document.querySelector('#rating');
 var priceEl = document.querySelector('#price');
 var takesResEl = document.querySelector('#reservation');
 var kidFriendlyEl = document.querySelector('#kid-friendly');
-var cardsContainer = document.querySelector('.card-container')
+var cardsContainer = document.querySelector('.card-container');
+var backImg = document.querySelector('#back-img');
 
 
 //Map Options (Create Variable to be input to change lat and lng)
