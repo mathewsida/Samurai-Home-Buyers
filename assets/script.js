@@ -144,6 +144,7 @@ function displayRestaurants(data) {
       <div id="description-1" class="column">Description:
 
         <h2 class="time-1">Hours: ${isOpen(restaurants[i].is_closed)}</h2>
+        <h2 class = "phone-number1">Phone Number: ${restaurants[i].phone}</h2>
         <h2 class="stars-1">Rating: ${restaurants[i].rating}</h2>
         <h2 class="money-1">Price level: ${restaurants[i].price}</h2>
       </div>
